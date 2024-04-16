@@ -23,12 +23,30 @@ body{
   border: 1px solid blue;
   grid-area: main;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 65% 35%;
+  grid-template-areas:
+  "project anno"
+  "project trend";
   row-gap: 5px;
 }
-.mainItem {
+#projectContainer{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-area: project;
+}
+.projectItem {
   border: 2px solid green;
   height: 100px;
   width: 200px;
   place-self: center;
+}
+#annoContainer{
+  border: 2px solid blueviolet;
+  display: grid;
+  grid-area: anno;
+}
+#trendContainer{
+  border: 2px solid blueviolet;
+  display: grid;
+  grid-area: trend;
 }
