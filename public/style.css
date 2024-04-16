@@ -1,5 +1,5 @@
 body{
-  background-color: midnightblue;
+  background-color: darkgray;
 }
 #bodyContainer {
   display: grid;
@@ -8,14 +8,15 @@ body{
   grid-template-areas:
     "side header"
     "side main";
-  column-gap: 5px;
-  row-gap: 5px;
+
 }
 #side {
+  background-color: aquamarine;
   border: 1px solid black;
   grid-area: side;
 }
 #top {
+  background-color: aliceblue;
   border: 1px solid red;
   grid-area: header;
 }
@@ -33,12 +34,19 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-area: project;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+background-color: beige;
+align-items: end;
+justify-items: center;
+}
+.projectItem:nth-child(1) {
+  grid-column: span 2;
+  width: 90%;
 }
 .projectItem {
   border: 2px solid green;
-  height: 100px;
-  width: 200px;
-  place-self: center;
+background-color: aliceblue;
 }
 #annoContainer{
   border: 2px solid blueviolet;
