@@ -1,6 +1,9 @@
 body{
   background-color: darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
 }
+
 #bodyContainer {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -8,12 +11,18 @@ body{
   grid-template-areas:
     "side header"
     "side main";
-
+    row-gap: 5px;
+  
 }
 #side {
   background-color: aquamarine;
   border: 1px solid black;
   grid-area: side;
+  display: grid;
+  grid-template-columns: repeat(30%, 70%);
+  grid-template-areas:
+    "sideH sideH"
+    "sidePic sideDiv";
 }
 #top {
   background-color: aliceblue;
@@ -34,19 +43,17 @@ body{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-area: project;
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-background-color: beige;
-align-items: end;
-justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: beige;
+  justify-items: center;
+  row-gap: 5px;
 }
 .projectItem:nth-child(1) {
   grid-column: span 2;
-  width: 90%;
 }
 .projectItem {
   border: 2px solid green;
-background-color: aliceblue;
+  background-color: aliceblue;
 }
 #annoContainer{
   border: 2px solid blueviolet;
@@ -57,4 +64,15 @@ background-color: aliceblue;
   border: 2px solid blueviolet;
   display: grid;
   grid-area: trend;
+}
+.sideDiv{
+ 
+  grid-area: sideDiv;
+}
+.sidePic{
+  height: 30px;
+  grid-area: sidePic;
+}
+.sideH{
+  grid-area: sideH;
 }
