@@ -14,16 +14,7 @@ body{
     row-gap: 5px;
   
 }
-#side {
-  background-color: aquamarine;
-  border: 1px solid black;
-  grid-area: side;
-  display: grid;
-  grid-template-columns: repeat(30%, 70%);
-  grid-template-areas:
-    "sideH sideH"
-    "sidePic sideDiv";
-}
+
 #top {
   background-color: aliceblue;
   border: 1px solid red;
@@ -65,14 +56,25 @@ body{
   display: grid;
   grid-area: trend;
 }
+
+#side {
+  background-color: aquamarine;
+  border: 1px solid black;
+  grid-area: side;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.sideDiv:nth-child(1) {
+  grid-column: span 1;
+}
 .sideDiv{
- 
-  grid-area: sideDiv;
+  display: grid;
+  grid-template-columns: 35px auto;
+  align-items: center; 
+  text-align: left;
 }
-.sidePic{
+
+#sidePic{
   height: 30px;
-  grid-area: sidePic;
-}
-.sideH{
-  grid-area: sideH;
+  width: 30px;
 }
