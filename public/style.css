@@ -2,6 +2,7 @@ body{
   background-color: darkgray;
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
+  
 }
 
 #bodyContainer {
@@ -27,22 +28,31 @@ body{
   "project anno"
   "project trend";
 }
+
+
 #projectContainer{
   display: grid;
   grid-template-columns: 50% 50%;
   grid-area: project;
   grid-template-columns: repeat(2, 1fr);
-  background-color: beige;
-  justify-items: center;
-  row-gap: 5px;
+  gap: 5px;
+
 }
 .projectItem:nth-child(1) {
   grid-column: span 2;
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 .projectItem {
-  border: 2px solid green;
+  border-left: 5px solid rgb(199, 188, 37);
+  box-shadow: 1px 1px 5px black;
   background-color: aliceblue;
+  border-radius: 10px;
+  margin: 5px;
 }
+
+
 #annoContainer{
   border: 2px solid blueviolet;
   display: grid;
@@ -53,10 +63,15 @@ body{
   display: grid;
   grid-area: trend;
 }
+.announcement:nth-child(1){
+  background: none;
+}
+.announcement{
+  border: 1px solid black;
+  background-color: aliceblue;
+}
 
-
-
-#side {
+#sideBar {
   background-color: aquamarine;
   grid-area: side;
   display: grid;
