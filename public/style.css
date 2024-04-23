@@ -11,8 +11,6 @@ body{
   grid-template-areas:
     "side header"
     "side main";
-    row-gap: 5px;
-  
 }
 
 #top {
@@ -28,7 +26,6 @@ body{
   grid-template-areas:
   "project anno"
   "project trend";
-  row-gap: 5px;
 }
 #projectContainer{
   display: grid;
@@ -57,12 +54,14 @@ body{
   grid-area: trend;
 }
 
+
+
 #side {
   background-color: aquamarine;
-  border: 1px solid black;
   grid-area: side;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-auto-flow: row;
 }
 .sideDiv:nth-child(1) {
   grid-column: span 1;
@@ -72,9 +71,12 @@ body{
   grid-template-columns: 35px auto;
   align-items: center; 
   text-align: left;
-}
-
-#sidePic{
   height: 30px;
-  width: 30px;
+}
+#sidePicH{
+  height: 30px;
+  
+}
+#sidePic{
+  height: 20px;
 }
