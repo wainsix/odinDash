@@ -1,11 +1,12 @@
 body{
-  background-color: darkgray;
+  
   font-family: Arial, Helvetica, sans-serif;
   font-size: small;
-  
+  width: 1000px;
 }
 
 #bodyContainer {
+  background-color: darkgray;
   display: grid;
   grid-template-columns: 20% 80%;
   grid-template-rows: 200px;
@@ -54,23 +55,34 @@ body{
 
 
 #annoContainer{
-  border: 2px solid blueviolet;
   display: grid;
   grid-area: anno;
 }
 #trendContainer{
-  border: 2px solid blueviolet;
   display: grid;
   grid-area: trend;
+  
 }
 .announcement:nth-child(1){
   background: none;
 }
-.announcement{
-  border: 1px solid black;
+.announcement:nth-child(2){
   background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
 }
+.trend{
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+  background-color: aliceblue;
+  display: grid;
+  grid-template-columns: 35px auto;
+  align-items: center; 
+  text-align: left;
+}
+.trendItem{
 
+}
 #sideBar {
   background-color: aquamarine;
   grid-area: side;
@@ -90,7 +102,6 @@ body{
 }
 #sidePicH{
   height: 30px;
-  
 }
 #sidePic{
   height: 20px;
