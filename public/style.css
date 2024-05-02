@@ -80,9 +80,7 @@ body{
   align-items: center; 
   text-align: left;
 }
-.trendItem{
 
-}
 #sideBar {
   background-color: aquamarine;
   grid-area: side;
