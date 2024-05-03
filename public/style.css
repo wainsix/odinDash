@@ -18,8 +18,28 @@ body{
   background-color: aliceblue;
   grid-area: header;
   height: 100px;
+  display: grid;
+  grid-template-areas: 
+    "search search user user"
+    "logged logged buttons buttons";
 }
 
+#search{
+  grid-area: search;
+}
+#bellUser{
+  display: grid;
+  grid-area: user;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#loggedUser{
+  display: grid;
+  grid-area: logged;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#userButtons{
+  grid-area: buttons;
+}
 
 #main {
   
