@@ -8,41 +8,71 @@ body{
 #bodyContainer {
   background-color: darkgray;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas:
     "side header"
     "side main";
 }
 
-#top {
+#header {
   background-color: aliceblue;
   grid-area: header;
-  height: 100px;
+  box-shadow:
+                2.7px 5.3px 14.4px rgba(0, 0, 0, 0.34),
+                11px 22px 85px rgba(0, 0, 0, 0.16);
   display: grid;
-  grid-template-areas: 
-    "search search user user"
-    "logged logged buttons buttons";
-}
 
+}
+#headerTop{
+  display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    place-content: center space-between;
+}
 #search{
-  grid-area: search;
+  
+  display: grid;
+    grid-template-columns: auto 1fr;
+    place-content: center start;
+    gap: 8px;
+}
+#searchField{
+  width: 80%;
+    min-width: 80px;
+    padding-left: 11px;
+    background-color: #d1d5db;
+    border-radius: 16px;
 }
 #bellUser{
   display: grid;
-  grid-area: user;
-  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.8fr 0.8fr 1fr;
+    place-content: center;
+    place-items: center end;
+}
+#headerBot{
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center space-between;
+    gap: 32px;
 }
 #loggedUser{
   display: grid;
-  grid-area: logged;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.8fr 0.8fr 1fr;
+    place-content: center;
+    place-items: center end;
 }
-#userButtons{
-  grid-area: buttons;
+.button{
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 800;
+  height: 2.5em;
+  width: 5.8em;
+  max-width: 100%;
+  border-radius: 32px;
+  cursor: pointer;
 }
 
 #main {
-  
   grid-area: main;
   display: grid;
   grid-template-columns: 65% 35%;
